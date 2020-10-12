@@ -8,30 +8,30 @@
           <div class="col"><b-icon-emoji-angry @click="click" v-b-modal.confirmation class="emojis bg-danger"></b-icon-emoji-angry></div>
         </div>
     </div>
-<!--     Confirmation modal-->
-    <div>
-      <b-modal id="confirmation" footer-class="m-footer" body-class="m-body">
-        <b-icon icon="check-2" font-scale="13" variant="success"></b-icon>
-        <p class="my-4">Thanks for reviewing!</p>
-      </b-modal>
-    </div>
 
+    <Confirmation v-if="reviewed==true"/>
   </div>
 </template>
 
 <script>
+import Confirmation from './Confirmation.vue'
 export default {
   name: "reviewPage",
+  components: {
+    Confirmation
+  },
   props:['text'],
   data() {
     return {
+      reviewed: false
     }
   },
   methods: {
     click() {
+      this.reviewed = true
       setTimeout( () => {
-          this.$bvModal.hide('confirmation');
-      }, 1500);
+          this.reviewed=false;
+      }, 2000);
     },
   }
 }

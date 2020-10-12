@@ -13,10 +13,10 @@ export default {
   data() {
     return{
       questions: [
-        {text:'how are you?'},
-        {text:'Do you like?'},
-        {text:'where is enemy troops?'},
-        {text:'Do you like Donald Trump?'},
+        {text:'Question-1?'},
+        {text:'Question-2?'},
+        {text:'How are you?'},
+        {text:'How do you like?'},
       ]
     }
   }
@@ -26,5 +26,7 @@ export default {
 <style scoped>
  a {
    display: block;
+   color: black;
+   font-size: x-large;
  }
 </style>
