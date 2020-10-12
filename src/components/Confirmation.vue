@@ -22,6 +22,7 @@ export default {
 }
 p {
   font-size: xx-large;
+  color: #28a745;
 }
 .checkmark__circle {
   stroke-dasharray: 166;
