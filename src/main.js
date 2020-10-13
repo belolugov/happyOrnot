@@ -15,8 +15,9 @@ Vue.use(IconsPlugin)
 Vue.use(VueRouter)
 Vue.use(VueMq, {
     breakpoints: {
-        mobile: 1366,
-        desktop: Infinity
+        mobile: 450,
+        tablet: 1367,
+        desktop: Infinity,
     }
 })
 const routes = [

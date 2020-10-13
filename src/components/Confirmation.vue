@@ -1,5 +1,5 @@
 <template>
- <div id="confirmation">
+ <div id="confirmation" :class="{mobile:$mq=='mobile' || $mq=='tablet', desktop:$mq=='desktop'}">
    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
      <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
      <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -15,10 +15,15 @@ export default {
 </script>
 
 <style scoped>
-#confirmation {
-  position: absolute;
-  left: 39%;
-  top: 18rem;
+.desktop {
+  position: relative;
+  bottom: 20rem;
+  text-align: center;
+}
+.mobile {
+  position: relative;
+  bottom: 12rem;
+  text-align: center;
 }
 p {
   font-size: xx-large;
