@@ -31,7 +31,7 @@ p {
   stroke-miterlimit: 10;
   stroke: #28a745;
   fill: none;
-  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }
 
 .checkmark {
@@ -43,15 +43,15 @@ p {
   stroke: #28a745;
   stroke-miterlimit: 10;
   margin: 10% auto;
-  /*box-shadow: inset 0px 0px 0px #7ac142;*/
-  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .2s ease-in-out .2s forwards, scale .2s ease-in-out .4s both;
 }
 
 .checkmark__check {
   transform-origin: 50% 50%;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
-  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
 }
 
 @keyframes stroke {

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-link class="hidden-button btn-lg" to="/">Back to list</router-link>
     <h1>{{ $route.params.text }}</h1>
     <div class="container mt-5">
         <div class="row icons">
@@ -20,7 +21,6 @@ export default {
   components: {
     Confirmation
   },
-  props:['text'],
   data() {
     return {
       reviewed: false
@@ -31,7 +31,7 @@ export default {
       this.reviewed = true
       setTimeout( () => {
           this.reviewed=false;
-      }, 2000);
+      }, 1500);
     },
   }
 }
@@ -54,5 +54,13 @@ export default {
  .emojis:hover {
    color: darkblue;
    cursor: pointer;
+ }
+ .hidden-button{
+   position: absolute;
+   left: 0;
+   top: 0;
+   color: white;
+   background: white;
+   border: none;
  }
 </style>

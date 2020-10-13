@@ -5,14 +5,20 @@ import List from './components/List.vue'
 import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router'
+import VueMq from 'vue-mq'
 
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(VueRouter)
-
+Vue.use(VueMq, {
+    breakpoints: {
+        mobile: 1366,
+        desktop: Infinity
+    }
+})
 const routes = [
   { path: '/', component: List, meta: {
       title: "List of questions for customer review"
