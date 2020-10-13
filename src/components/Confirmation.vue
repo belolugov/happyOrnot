@@ -1,6 +1,6 @@
 <template>
- <div id="confirmation" :class="{mobile:$mq=='mobile' || $mq=='tablet', desktop:$mq=='desktop'}">
-   <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+ <div id="confirmation">
+   <svg class="checkmark mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
      <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
      <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
    </svg>
@@ -15,12 +15,7 @@ export default {
 </script>
 
 <style scoped>
-.desktop {
-  position: relative;
-  bottom: 20rem;
-  text-align: center;
-}
-.mobile {
+#confirmation {
   position: relative;
   bottom: 12rem;
   text-align: center;
@@ -47,7 +42,7 @@ p {
   stroke-width: 4;
   stroke: #28a745;
   stroke-miterlimit: 10;
-  margin: 10% auto;
+  margin-bottom: 5px;
   box-shadow: inset 0px 0px 0px #7ac142;
   animation: fill .2s ease-in-out .2s forwards, scale .2s ease-in-out .4s both;
 }

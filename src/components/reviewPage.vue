@@ -4,13 +4,13 @@
     <h1>{{ $route.params.text }}</h1>
     <div class="container mt-5">
         <div class="row icons">
-          <div class="col"><b-icon-emoji-smile @click="click" class="emojis bg-success"></b-icon-emoji-smile></div>
-          <div class="col"><b-icon-emoji-neutral @click="click" class="emojis bg-warning"></b-icon-emoji-neutral></div>
-          <div class="col"><b-icon-emoji-angry @click="click" class="emojis bg-danger"></b-icon-emoji-angry></div>
+          <div class="col"><b-icon-emoji-smile @click="click" :disabled="reviewed" class="emojis bg-success"></b-icon-emoji-smile></div>
+          <div class="col"><b-icon-emoji-neutral @click="click" :disabled="reviewed" class="emojis bg-warning"></b-icon-emoji-neutral></div>
+          <div class="col"><b-icon-emoji-angry @click="click" :disabled="reviewed" class="emojis bg-danger"></b-icon-emoji-angry></div>
         </div>
     </div>
 
-    <Confirmation v-if="reviewed==true"/>
+    <Confirmation v-if="reviewed"/>
   </div>
 </template>
 
