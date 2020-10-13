@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <b-container>
       <router-link
           :to="{ name:'review', params: { text:question.text } }"
           v-for="question in questions" :key="question.index"
-      ><button class="btn btn-lg btn-outline-info mb-1">{{ question.text }}</button></router-link>
-  </div>
+      ><b-button size="lg" variant="outline-info" class="mb-1">{{ question.text }}</b-button></router-link>
+  </b-container>
 </template>
 
 <script>
@@ -33,7 +33,6 @@ export default {
  .btn {
    display: block;
    width: 100%;
-
  }
  a:hover {
    text-decoration: none;

@@ -2,14 +2,17 @@
   <div>
     <router-link class="hidden-button btn-lg" to="/">Back to list</router-link>
     <h1>{{ $route.params.text }}</h1>
-    <div class="container mt-5">
-        <div class="row icons">
-          <div class="col"><b-icon-emoji-smile @click="click" :disabled="reviewed" class="emojis bg-success"></b-icon-emoji-smile></div>
-          <div class="col"><b-icon-emoji-neutral @click="click" :disabled="reviewed" class="emojis bg-warning"></b-icon-emoji-neutral></div>
-          <div class="col"><b-icon-emoji-angry @click="click" :disabled="reviewed" class="emojis bg-danger"></b-icon-emoji-angry></div>
-        </div>
-    </div>
-
+    <b-container class="mt-5">
+        <b-row class="icons">
+              <b-col class="col" v-for="icon in icons" :key="icon.icon">
+                <b-icon
+                    :icon="icon.icon"
+                    :class="icon.class"
+                    :disabled="reviewed"
+                    @click="click"></b-icon>
+              </b-col>
+        </b-row>
+    </b-container>
     <Confirmation v-if="reviewed"/>
   </div>
 </template>
@@ -23,7 +26,12 @@ export default {
   },
   data() {
     return {
-      reviewed: false
+      reviewed: false,
+      icons: [
+        {icon:'emoji-smile', class:'emojis bg-success'},
+        {icon:'emoji-neutral', class:'emojis bg-warning'},
+        {icon:'emoji-angry', class:'emojis bg-danger'}
+      ]
     }
   },
   methods: {
